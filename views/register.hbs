@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration</title>
+  <link rel="stylesheet" href="css/register.css" />
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+      integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+  />
+</head>
+
+<body class="form">
+  <div class="alert alert-success" id="shows" role="alert" style="font-size: x-large;">
+    
+    </div>
+      <script>
+        var decodedJsons = decodeURIComponent("{{{encodedJsons}}}");
+        if(decodedJsons===''){
+          document.getElementById('shows').style.display = 'none';
+        }
+        else{
+          document.getElementById('shows').innerHTML = `<strong> Success:  </strong> ${decodedJsons}`;
+          setTimeout(()=>{
+            document.getElementById('shows').style.display = 'none';
+          },5000)
+        }
+      </script>
+      <div class="alert alert-warning" id="showw" role="alert" style="font-size: x-large;">
+      </div>
+      <script>
+        var decodedJsonw = decodeURIComponent("{{{encodedJsonw}}}");
+        if(decodedJsonw===''){
+          document.getElementById('showw').style.display = 'none';
+        }
+        else{
+          document.getElementById('showw').innerHTML = `<strong> WARNING!:  </strong> ${decodedJsonw}`;
+          setTimeout(()=>{
+            document.getElementById('showw').style.display = 'none';
+          },5000)
+        }
+      </script>
+  <form action="/company" method="post" name="main_form">
+    <h4>Company Registration</h4>
+    <div><label for="username"> Company Name</label></div>
+    <input name="company_name" id="username" type="text" placeholder="Enter company name" maxlength="50"
+      pattern="[A-Za-z]{1,50}" title="Name can not contain numbers" />
+    <div><label for="useremail">Email Address</label></div>
+    <input name="company_email" id="useremail" type="email" placeholder="Enter email" maxlength="50" />
+    <div><label for="userphone">phone number</label></div>
+    <input name="mobile_number" id="useremail" type="text" placeholder="Enter phone number" maxlength="10" />
+    <div><label for="userphone">Company GST.NO</label></div>
+    <input name="gstno" id="useremail" type="text" placeholder="Enter GST NO." maxlength="15" minlength="15" />
+    <div><label for="userPass">Password</label></div>
+    <input name="password" id="userPass" type="password" placeholder="Enter password" maxlength="20" pattern=".{6,20}"
+      title="6 to 20 characters" />
+    <div><label for="userConfirmPass">Confirm password</label></div>
+    <input name="confirmPassword" id="userConfirmPass" type="password" placeholder="Confirm password" maxlength="20"
+      pattern=".{6,20}" title="6 to 20 characters" />
+    <span id="info"></span>
+    <div class="lo">
+      <h5>Already account?</h5>
+      <a href="./login.html">Login</a>
+    </div>
+    <input class="button" type="submit" value="Register" name="submit" />
+  </form>
+
+  <form action="/driver" method="post" name="main_form">
+    <h4>Driver Registration</h4>
+    <div><label for="username">Driver Name</label></div>
+    <input name="driver_name" id="username" type="text" placeholder="Enter your name" maxlength="50"
+      pattern="[A-Za-z]{1,50}" title="Name can not contain numbers" />
+    {{!-- <div><label for="useremail">Email Address</label></div> --}}
+    {{!-- <input name="company_email" id="useremail" type="email" placeholder="Enter email" maxlength="50" /> --}}
+    <div><label for="userphone">phone number</label></div>
+    <input name="mobile_number" id="useremail" type="text" placeholder="Enter phone number" maxlength="10" />
+
+    <div><label for="userphone">Vehicle type.</label></div>
+    <input name="vehicle_type" id="useremail1" type="text" placeholder="choota hathi" />
+    
+    <div><label for="userphone">AdhaarCard No.</label></div>
+    <input name="adhaar_card" id="useremail2" type="text" placeholder="1234 XXXX XXXX" maxlength="12" minlength="12" />
+
+    <div><label for="userPass">Password</label></div>
+    <input name="password" id="userPass" type="password" placeholder="Enter password" maxlength="20" pattern=".{6,20}"
+      title="6 to 20 characters" />
+
+    <div><label for="userConfirmPass">Confirm password</label></div>
+    <input name="confirmPassword" id="userConfirmPass" type="password" placeholder="Confirm password" maxlength="20"
+      pattern=".{6,20}" title="6 to 20 characters" />
+
+    <span id="info"></span>
+    <div class="lo">
+      <h5>Already account?</h5>
+      <a href="./login.html">Login</a>
+    </div>
+    <input class="button" type="submit" value="Register" name="submit" />
+  </form>
+</body>
+{{!--
+<script src="js/register.js"></script> --}}
+
+</html>

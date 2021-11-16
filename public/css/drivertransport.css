@@ -1,0 +1,62 @@
+.first{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+img{
+    width: 130px;
+    height: 100px;
+}
+.driver{
+    border-style: groove;
+    margin-top: 23px;
+    display: flex;
+    padding-left: 300px;
+    padding-top: 21px;
+    align-items: center;
+
+}
+.second{
+    margin-left: 35px;
+}
+.third{
+    margin-left: 35px;
+}
+span{
+    color: #7AB730;
+}
+
+h5{
+    margin-top: -115px;
+}
+button{
+    border-radius: 11px;
+    padding: 8px 35px;
+    margin-top: 3px;
+    margin-bottom: 23px;
+    margin-left: 23px;
+    color: white;
+    border-style: none;
+    background-color: #7AB730;
+}
+.btt:hover{
+    color: white;
+    transition: background-color 0.9s;
+    background-color: green;
+    cursor: pointer;
+
+}
+#logoutcss{
+    padding: 0px 5px;
+    color: black;
+    border: 2px solid #7AB730;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 0px 5px;
+    margin: 0px;
+    /* margin-top: 3px;
+    margin-bottom: 23px;
+    margin-left: 23px; */
+  }

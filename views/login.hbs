@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+      integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  <title>Login</title>
+  <link rel="stylesheet" href="css/register.css" />
+</head>
+
+<body class="form">
+  <div class="alert alert-success" id="shows" role="alert" style="font-size: x-large;">
+    
+    </div>
+      <script>
+        var decodedJsons = decodeURIComponent("{{{encodedJsons}}}");
+        if(decodedJsons===''){
+          document.getElementById('shows').style.display = 'none';
+        }
+        else{
+          document.getElementById('shows').innerHTML = `<strong> Success:  </strong> ${decodedJsons}`;
+          setTimeout(()=>{
+            document.getElementById('shows').style.display = 'none';
+          },5000)
+        }
+      </script>
+      <div class="alert alert-warning" id="showw" role="alert" style="font-size: x-large;">
+      </div>
+      <script>
+        var decodedJsonw = decodeURIComponent("{{{encodedJsonw}}}");
+        if(decodedJsonw===''){
+          document.getElementById('showw').style.display = 'none';
+        }
+        else{
+          document.getElementById('showw').innerHTML = `<strong> WARNING!:  </strong> ${decodedJsonw}`;
+          setTimeout(()=>{
+            document.getElementById('showw').style.display = 'none';
+          },5000)
+        }
+      </script>
+  <form action="/company_login" method="post" name="main_form">
+    <h4>Company Login</h4>
+    <div><label for="useremail">Email Address</label></div>
+    <input name="company_email" id="useremail" type="email" placeholder="Enter email" maxlength="50" />
+
+    <div><label for="userPass">Password</label></div>
+    <input name="password" id="userPass" type="password" placeholder="Enter password" maxlength="20" pattern=".{6,20}"
+      title="6 to 20 characters" />
+
+    <span id="info"></span>
+    <div class="lo">
+      <h5>New user?</h5>
+      <a href="/register">Register</a>
+    </div>
+    <input class="button" type="submit" value="login" name="submit" />
+  </form>
+
+
+  <form action="/driver_login" method="post" name="main_form">
+    <h4>Driver Login</h4>
+    <div><label for="useremail">mobile no.</label></div>
+    <input name="mobile_number" id="useremail" type="text" placeholder="Enter mobile no." maxlength="10" minlength="10" />
+
+    <div><label for="userPass">Password</label></div>
+    <input name="password" id="userPass" type="password" placeholder="Enter password" maxlength="20" pattern=".{6,20}"
+      title="6 to 20 characters" />
+
+    <span id="info"></span>
+    <div class="lo">
+      <h5>New user?</h5>
+      <a href="/register">Register</a>
+    </div>
+    <input class="button" type="submit" value="login" name="submit" />
+  </form>
+</body>
+{{!--
+<script src="js/register.js"></script> --}}
+
+</html>
